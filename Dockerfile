@@ -5,6 +5,10 @@ WORKDIR /app
 
 # Copy the current directory contents into the container at /app 
 ADD . /app
+
+# Add Refreshed sites config by annamosene (thanks!!!)
+ADD https://raw.githubusercontent.com/annamosene/MammaMiaMFP/refs/heads/main/config.json config.json
+
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 #EXPOSE the port, for now default is 8080 cause it's the only one really allowed by HuggingFace
