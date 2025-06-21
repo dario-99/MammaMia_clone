@@ -4,6 +4,8 @@ FROM python:3.10-slim-buster
 # Set the working directory in the container to /app
 WORKDIR /app
 
+COPY . .
+
 # Install git
 RUN apt-get update && apt-get install -y git
 
